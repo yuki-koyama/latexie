@@ -2,6 +2,12 @@
 
 Utilities for writing papers with LaTeX
 
+## Usage
+
+```latex
+\usepackage{/path/to/this/repository/latexie}
+```
+
 ## Policies
 
 - Prefer `\newcommand` and `\renewcommand` (LaTeX) to `\def` (TeX)
