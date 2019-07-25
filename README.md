@@ -2,6 +2,12 @@
 
 Utilities for writing papers with LaTeX
 
+## Goals
+
+- Faster paper writing (especially in the computer science domain)
+- Better readability by providing shorter commands (e.g., `\bfx` rather than `\mathbf{x}`)
+- Better maintainability by providing semantic commands (e.g., `\T` rather than `\mathsf{T}` for the matrix transposition)
+
 ## Usage
 
 ```latex
