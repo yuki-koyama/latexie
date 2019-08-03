@@ -20,6 +20,8 @@ Utilities for writing papers with LaTeX
 
 - Prefer `\newcommand` and `\renewcommand` (LaTeX) to `\def` (TeX)
   - [macros - What is the difference between \def and \newcommand? - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/655/what-is-the-difference-between-def-and-newcommand)
+- Prefer `\newcommand*` to `\newcommand` if it is the intention
+  - [macros - What's the difference between \newcommand and \newcommand*? - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/1050/whats-the-difference-between-newcommand-and-newcommand)
 
 ### Math
 
@@ -101,6 +103,26 @@ After:
 Result:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;\mathbf{A}&space;&&space;\mathbf{B}&space;\\&space;\mathbf{C}&space;&&space;\mathbf{D}&space;\end{bmatrix}^{-1}&space;=&space;\begin{bmatrix}&space;\mathbf{A}^{-1}&space;(&space;\mathbf{I}&space;&plus;&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;)&space;&&space;-&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\\&space;-&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;&&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}&space;\mathbf{A}&space;&&space;\mathbf{B}&space;\\&space;\mathbf{C}&space;&&space;\mathbf{D}&space;\end{bmatrix}^{-1}&space;=&space;\begin{bmatrix}&space;\mathbf{A}^{-1}&space;(&space;\mathbf{I}&space;&plus;&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;)&space;&&space;-&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\\&space;-&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;&&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\end{bmatrix}" title="\begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}^{-1} = \begin{bmatrix} \mathbf{A}^{-1} ( \mathbf{I} + \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} ) & - \mathbf{A}^{-1} \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \\ - ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} & ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \end{bmatrix}" /></a>
+
+----
+
+Before:
+```latex
+\begin{align}
+  p(\mathcal{D} \:\vert\: \boldsymbol{\theta})
+\end{align}
+```
+
+After:
+```latex
+\begin{align}
+  \cprob{ \calD }{ \bftheta }
+\end{align}
+```
+
+Result:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=p(\mathcal{D}&space;\:\vert\:&space;\boldsymbol{\theta})" target="_blank"><img src="https://latex.codecogs.com/svg.latex?p(\mathcal{D}&space;\:\vert\:&space;\boldsymbol{\theta})" title="p(\mathcal{D} \:\vert\: \boldsymbol{\theta})" /></a>
 
 ## Limitations
 
