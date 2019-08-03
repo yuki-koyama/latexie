@@ -5,7 +5,7 @@ Utilities for writing papers with LaTeX
 ## Goals
 
 - Faster paper writing (especially in the computer science domain)
-- Better readability by providing shorter commands (e.g., `\bfx` rather than `\mathbf{x}`)
+- Shorter commands while preserving readability (e.g., `\bfx` rather than `\mathbf{x}`)
 - Better maintainability by providing semantic commands (e.g., `\T` rather than `\mathsf{T}` for the matrix transposition)
 
 ## Usage
@@ -31,3 +31,80 @@ Utilities for writing papers with LaTeX
 ## Documentation
 
 (TODO)
+
+## Example
+
+Before:
+```
+\begin{align}
+  \mathcal{N}(\mathbf{x}; \boldsymbol{\mu}, \boldsymbol{\Sigma})
+  =
+  \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\boldsymbol{\Sigma})^{\frac{1}{2}}}
+  \exp \left\{
+    - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\mathsf{T}} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu})
+  \right\}
+\end{align}
+```
+
+After:
+```
+\begin{align}
+  \calN(\bfx; \bfmu, \bfSigma)
+  =
+  \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\bfSigma)^{\frac{1}{2}}}
+  \exp \left\{
+    - \frac{1}{2} (\bfx - \bfmu)^\T \bfSigma^\inv (\bfx - \bfmu)
+  \right\}
+\end{align}
+```
+
+Result:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\mathsf{T}}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\mathsf{T}}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" title="\mathcal{N}(\mathbf{x}; \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\boldsymbol{\Sigma})^{\frac{1}{2}}} \exp \left\{ - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\mathsf{T}} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right\}" /></a>
+
+----
+
+Before:
+```latex
+\begin{align}
+  \begin{bmatrix}
+    \mathbf{A} & \mathbf{B} \\
+    \mathbf{C} & \mathbf{D}
+  \end{bmatrix}^{-1}
+  =
+  \begin{bmatrix}
+    \mathbf{A}^{-1} ( \mathbf{I} + \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} ) &
+    - \mathbf{A}^{-1} \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \\
+    - ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} &
+    ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1}
+  \end{bmatrix}
+\end{align}
+```
+
+After:
+```latex
+\begin{align}
+  \bmat{
+    \bfA & \bfB \\
+    \bfC & \bfD
+  }^\inv
+  =
+  \bmat{
+    \bfA^\inv ( \bfI + \bfB ( \bfD - \bfC \bfA^\inv \bfB )^\inv \bfC \bfA^\inv ) &
+    - \bfA^\inv \bfB ( \bfD - \bfC \bfA^\inv \bfB )^\inv \\
+    - ( \bfD - \bfC \bfA^\inv \bfB )^\inv \bfC \bfA^\inv &
+    ( \bfD - \bfC \bfA^\inv \bfB )^\inv
+  }
+\end{align}
+```
+
+Result:
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;\mathbf{A}&space;&&space;\mathbf{B}&space;\\&space;\mathbf{C}&space;&&space;\mathbf{D}&space;\end{bmatrix}^{-1}&space;=&space;\begin{bmatrix}&space;\mathbf{A}^{-1}&space;(&space;\mathbf{I}&space;&plus;&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;)&space;&&space;-&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\\&space;-&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;&&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\begin{bmatrix}&space;\mathbf{A}&space;&&space;\mathbf{B}&space;\\&space;\mathbf{C}&space;&&space;\mathbf{D}&space;\end{bmatrix}^{-1}&space;=&space;\begin{bmatrix}&space;\mathbf{A}^{-1}&space;(&space;\mathbf{I}&space;&plus;&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;)&space;&&space;-&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\\&space;-&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;&&space;(&space;\mathbf{D}&space;-&space;\mathbf{C}&space;\mathbf{A}^{-1}&space;\mathbf{B}&space;)^{-1}&space;\end{bmatrix}" title="\begin{bmatrix} \mathbf{A} & \mathbf{B} \\ \mathbf{C} & \mathbf{D} \end{bmatrix}^{-1} = \begin{bmatrix} \mathbf{A}^{-1} ( \mathbf{I} + \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} ) & - \mathbf{A}^{-1} \mathbf{B} ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \\ - ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \mathbf{C} \mathbf{A}^{-1} & ( \mathbf{D} - \mathbf{C} \mathbf{A}^{-1} \mathbf{B} )^{-1} \end{bmatrix}" /></a>
+
+## Limitations
+
+Some commands are probably not very effective with
+- code highlighting
+- code completion
+- code snippets
