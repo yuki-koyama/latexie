@@ -35,7 +35,7 @@ Utilities for writing papers with LaTeX
 ## Example
 
 Before:
-```
+```latex
 \begin{align}
   \mathcal{N}(\mathbf{x}; \boldsymbol{\mu}, \boldsymbol{\Sigma})
   =
@@ -47,7 +47,7 @@ Before:
 ```
 
 After:
-```
+```latex
 \begin{align}
   \calN(\bfx; \bfmu, \bfSigma)
   =
