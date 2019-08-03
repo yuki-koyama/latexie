@@ -1,6 +1,7 @@
 \ProvidesPackage{latexie}
 
 \RequirePackage{amsmath}
+\RequirePackage{ifthen}
 \RequirePackage{xcolor}
 \RequirePackage{xspace}
 \RequirePackage{soul}
@@ -155,5 +156,13 @@
 
 % Others
 \newcommand{\GP}{\mathcal{GP}}
+\newcommand*{\given}{\:\vert\:}
+\newcommand*{\middlegiven}{\:\middle\vert\:}
+\newcommand*{\prob}{\@ifstar\prob@Star\prob@NoStar}
+\newcommand*{\prob@Star}[1]{p\left(#1\right)}
+\newcommand*{\prob@NoStar}[1]{p(#1)}
+\newcommand*{\cprob}{\@ifstar\cprob@Star\cprob@NoStar}
+\newcommand*{\cprob@Star}[2]{p\left(#1\middlegiven#2\right)}
+\newcommand*{\cprob@NoStar}[2]{p(#1\given#2)}
 
 \endinput
