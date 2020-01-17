@@ -5,6 +5,20 @@
 \RequirePackage{ifthen}
 \RequirePackage{xcolor}
 
+% ------------------------------------------------------------------------------
+
+\newboolean{@Annotation}
+\setboolean{@Annotation}{true}
+\DeclareOption{noannotation}{
+  \setboolean{@Annotation}{false}
+}
+
+\ExecuteOptions{}
+
+\ProcessOptions\relax
+
+% ------------------------------------------------------------------------------
+
 % Semantic colors
 \definecolor{Primary}{cmyk}{1.00, 0.85, 0.20, 0.05}
 \definecolor{PrimaryBg}{cmyk}{0.18, 0.03, 0.00, 0.00}
@@ -25,9 +39,15 @@
 % ------------------------------------------------------------------------------
 
 % Annotations
-\newcommand{\todo}[1]{\textcolor{harvardcrimson}{[TODO: #1]}}
-\newcommand{\note}[1]{\textcolor{harvestgold}{[Note: #1]}}
-\newcommand{\spot}[1]{\textcolor{majorelleblue}{#1}}
+\ifthenelse{\boolean{@Annotation}}{%
+  \newcommand{\todo}[1]{\textcolor{harvardcrimson}{[TODO: #1]}}
+  \newcommand{\note}[1]{\textcolor{harvestgold}{[Note: #1]}}
+  \newcommand{\spot}[1]{\textcolor{majorelleblue}{#1}}
+}{%
+  \newcommand{\todo}[1]{}
+  \newcommand{\note}[1]{}
+  \newcommand{\spot}[1]{#1}
+}
 
 % Latin abbreviations
 \newcommand{\etal}{\textit{et al.}}
