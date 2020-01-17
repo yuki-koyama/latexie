@@ -1,10 +1,11 @@
 \ProvidesPackage{latexie}
 
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{ifthen}
 \RequirePackage{xcolor}
-\RequirePackage{soul}
 
 % Semantic colors
 \definecolor{Primary}{cmyk}{1.00, 0.85, 0.20, 0.05}
@@ -21,9 +22,9 @@
 % ------------------------------------------------------------------------------
 
 % Annotations
-\newcommand{\todo}[1]{\sethlcolor{DangerBg}\textcolor{Danger}{\hl{[TODO: #1]}}}
-\newcommand{\note}[1]{\sethlcolor{SecondaryBg}\textcolor{Secondary}{\hl{[Note: #1]}}}
-\newcommand{\spot}[1]{\sethlcolor{WarningBg}\textcolor{Warning}{\hl{#1}}}
+\newcommand{\todo}[1]{\textcolor{Magenta}{[TODO: #1]}}
+\newcommand{\note}[1]{\textcolor{OliveGreen}{[Note: #1]}}
+\newcommand{\spot}[1]{\textcolor{NavyBlue}{#1}}
 
 % Latin abbreviations
 \newcommand{\etal}{\textit{et al.}}
