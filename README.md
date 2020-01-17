@@ -34,6 +34,13 @@ Utilities for writing papers with LaTeX
 
 (TODO)
 
+## Dependencies
+
+- amsmath
+- amsfonts
+- ifthen
+- xcolor
+
 ## Math Examples
 
 Before:
