@@ -32,7 +32,9 @@ Utilities for writing papers with LaTeX
 
 ## Documentation
 
-(TODO)
+### Options
+
+- `noannotation`: If this option is passed, the annotation commands do not display annotaions. More specifically, `\note` and `\todo` do not rendered, and `\spot` displays its content without colored.
 
 ## Dependencies
 
