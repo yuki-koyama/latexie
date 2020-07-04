@@ -2,6 +2,9 @@
 
 Utilities for writing papers with LaTeX
 
+- `latexie.sty`: The main style file with many custom commands
+- `latexie-article.cls`: A plain article class with nice format settings
+
 ## Goals
 
 - Faster paper writing (especially in the computer science domain)
