@@ -1,0 +1,54 @@
+\documentclass[]{latexie-article}
+
+\usepackage[]{latexie}
+\usepackage{lipsum}
+
+\title{latexie Example Document}
+\author{Yuki Koyama}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  \lipsum[1-2]
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+This is a citation test \cite{Koyama:SIGGRAPH:17, Koyama:SIGGRAPH:20, Koyama:CHI:18}.
+\todo{This is a test of the ``todo'' command.}
+\note{This is a test of the ``note'' command.}
+\spot{This is a test of the ``spot'' command.}
+
+\lipsum[1-5]
+
+\section{Equations}
+
+Minimization problem:
+\begin{align}
+  \bfx^{*} = \argmin_{\bfx \in \calX} f(\bfx).
+\end{align}
+
+Conditional probability:
+\begin{align}
+  \cprob{\theta}{x} \propto \cprob{x}{\theta}\prob{\theta}
+\end{align}
+
+Gaussian distribution:
+\begin{align}
+  \calN(\bfx; \bfmu, \bfSigma)
+  =
+  \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\bfSigma)^{\frac{1}{2}}}
+  \exp \left\{
+    - \frac{1}{2} (\bfx - \bfmu)^\T \bfSigma^\inv (\bfx - \bfmu)
+  \right\}.
+\end{align}
+
+\bibliographystyle{plainnat}
+\bibliography{example}
+
+\end{document}
