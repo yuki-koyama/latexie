@@ -130,3 +130,10 @@ Some commands are probably not very effective with
 - code highlighting
 - code completion
 - code snippets
+
+## Example
+
+See `example.tex` for a working example. It can be compiled by using `pdflatex`. If you use `latexmk`, then run this command:
+```sh
+latexmk -pdf example
+```
