@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{latexie-article}[2020/07/03]
+\ProvidesClass{latexie-article}[2020/08/06]
 
 \LoadClass[a4paper]{article}
 
@@ -26,3 +26,12 @@
   citecolor=ACMPurple,
   urlcolor=ACMDarkBlue,
   filecolor=ACMDarkBlue}
+
+\let\oldmaketitle\maketitle
+\renewcommand{\maketitle}{
+  \hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author},
+  }
+  \oldmaketitle
+}
