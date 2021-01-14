@@ -1,11 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{latexie-article}[2020/08/06]
+\ProvidesClass{latexie-article}[2021/01/14]
 
 \LoadClass[a4paper]{article}
 
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[tt=false]{libertine}
 \RequirePackage[]{microtype}
+\RequirePackage[hyphens]{url}
 \RequirePackage[]{hyperref}
 \RequirePackage[parfill]{parskip}
 \RequirePackage[numbers,square,semicolon]{natbib}
