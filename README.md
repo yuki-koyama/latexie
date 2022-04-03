@@ -9,7 +9,7 @@ Utilities for writing papers with LaTeX
 
 - Faster paper writing (especially in the computer science domain)
 - Shorter commands while preserving readability (e.g., `\bfx` rather than `\mathbf{x}`)
-- Better maintainability by providing semantic commands (e.g., `\T` rather than `\mathsf{T}` for the matrix transposition)
+- Better maintainability by providing semantic commands (e.g., `\T` rather than `\top` for the matrix transposition)
 
 ## Usage
 
@@ -30,8 +30,8 @@ Utilities for writing papers with LaTeX
 
 - Prefer `\DeclareMathOperator` (from `amsmath` package) to `\newcommand`
   - [best practices - What is the difference of \mathop, \operatorname and \DeclareMathOperator? - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/84302/what-is-the-difference-of-mathop-operatorname-and-declaremathoperator)
-- Use `\mathsf{T}` for the matrix and vector transpose operator
-  - [List of mathematical symbols - Wikipedia](https://en.wikipedia.org/wiki/List_of_mathematical_symbols) (Retrieved: 2019/07/25)
+- Use `\top` for the matrix and vector transpose operator
+  - [List of mathematical symbols - Wikipedia](https://en.wikipedia.org/wiki/List_of_mathematical_symbols) (Retrieved: 2022/04/03)
 
 ## Documentation
 
@@ -70,7 +70,7 @@ Before:
 =
 \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\boldsymbol{\Sigma})^{\frac{1}{2}}}
 \exp \left\{
-  - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\mathsf{T}} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu})
+  - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\top} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu})
 \right\}
 ```
 
@@ -86,7 +86,7 @@ After:
 
 Result:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\mathsf{T}}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\mathsf{T}}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" title="\mathcal{N}(\mathbf{x}; \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\boldsymbol{\Sigma})^{\frac{1}{2}}} \exp \left\{ - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\mathsf{T}} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right\}" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\top}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\mathcal{N}(\mathbf{x};&space;\boldsymbol{\mu},&space;\boldsymbol{\Sigma})&space;=&space;\frac{1}{(2&space;\pi)^{\frac{n}{2}}&space;\det(\boldsymbol{\Sigma})^{\frac{1}{2}}}&space;\exp&space;\left\{&space;-&space;\frac{1}{2}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})^{\top}&space;\boldsymbol{\Sigma}^{-1}&space;(\mathbf{x}&space;-&space;\boldsymbol{\mu})&space;\right\}" title="\mathcal{N}(\mathbf{x}; \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2 \pi)^{\frac{n}{2}} \det(\boldsymbol{\Sigma})^{\frac{1}{2}}} \exp \left\{ - \frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^{\top} \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu}) \right\}" /></a>
 
 ----
 
